@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title text-right>
+      Клиенты
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="list">
+    <p *ngFor="let client of clients" (click)="edit(client.id)">{{client.name}}</p>
+  </div>
+  <div style="text-align: center; padding-top: 25px;"><button type="button" class="btn btn-success" [routerLink]="[ '/add-client' ]">+</button></div>
+</ion-content>

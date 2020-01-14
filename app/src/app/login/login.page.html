@@ -1,0 +1,29 @@
+<ion-content>
+  <div class="content">
+    <div class="wrap">
+      <div class="logo">
+        <div class="main">
+          BLACKZIPPERS
+        </div>
+        <div class="sub">
+          Швейная фурнитура оптом
+        </div>
+      </div>
+      <form [formGroup]="loginForm" class="form" (ngSubmit)="login()">
+        <div class="login">
+          <input formControlName="login" type="text" class="form-control" placeholder="Логин">
+        </div>
+        <div class="password">
+          <input formControlName="password" type="password" class="form-control" placeholder="Пароль">
+        </div>
+        <div class="form-check">
+          <input formControlName="remember" type="checkbox" class="form-check-input remember-input" id="remember">
+          <label class="form-check-label remember-label" for="remember">Запомнить</label>
+        </div>
+        <div class="login">
+          <button type="submit" [disabled]="loginForm.invalid" class="btn btn-primary">Войти</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</ion-content>

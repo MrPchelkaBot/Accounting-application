@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title text-right>
+      Заказы
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div style="text-align: center; padding-top: 15px;">
+    <mat-slide-toggle (change)="changeSlide()" color="warn" checked="false">
+      {{ slide }}
+    </mat-slide-toggle>
+  </div>
+  <div class="form-group filtr-client grp">
+    <label for="client">Клиент</label>
+    <select [(ngModel)]="clientNG" class="form-control" (change)="onChangeClient()" id="client">
+      <option [value]="-1">Не выбрано</option>
+      <option *ngFor="let client of clients" [value]="client.id">{{ client.name }}</option>
+    </select>
+  </div>
+  <div style="margin-top: 10px;" *ngIf="slide == 'Даты'" class="form-group input-group grp">
+    <input id="filtr" [value]="dateFiltr | date: 'dd/MM/yyyy'" (click)="showDatepicker()" inputmode="none"
+      style="border-radius: 10px 0px 0px 10px" type="text" class="form-control">
+    <div class="input-group-append">
+      <span style="border-radius: 0px 10px 10px 0px;" class="input-group-text"><i (click)="showDatepicker()"
+          class="far fa-calendar-alt"></i></span>
+    </div>
+  </div>
+  <div class="list">
+    <p *ngFor="let order of orders" (click)="edit(order.id)">{{order.client.city}} - {{order.client.name}} </p>
+  </div>
+  <div style="text-align: center; padding-top: 25px;"><button type="button" class="btn btn-success"
+      [routerLink]="[ '/add-order' ]">+</button></div>
+</ion-content>

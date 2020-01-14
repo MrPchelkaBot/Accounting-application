@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title text-right>
+      Расходы
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="margin-top: 10px;" class="form-group input-group grp">
+    <input id="filtr" [value]="dateFiltr | date: 'dd/MM/yyyy'" (click)="showDatepicker()" inputmode="none"
+      style="border-radius: 10px 0px 0px 10px" type="text" class="form-control">
+    <div class="input-group-append">
+      <span style="border-radius: 0px 10px 10px 0px;" class="input-group-text"><i (click)="showDatepicker()"
+          class="far fa-calendar-alt"></i></span>
+    </div>
+  </div>
+  <div class="list">
+      <div *ngFor="let cost of costs">
+        <span>{{cost.name}}</span>
+        <span style="color: #EB5757; float: right;">{{cost.price}} р</span>
+      </div>
+    </div>
+  <div style="text-align: center; padding-top: 25px;"><button type="button" class="btn btn-success"
+      [routerLink]="[ '/add-cost' ]">+</button></div>
+</ion-content>

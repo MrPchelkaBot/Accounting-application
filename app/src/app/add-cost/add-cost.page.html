@@ -1,0 +1,31 @@
+<ion-content>
+  <form [formGroup]="addForm" id="form-cost" (ngSubmit)="add()">
+    <div class="form-group input-group grp">
+      <label style="width: 100%;" for="created">Дата</label>
+      <input id="created" [value]="dateInput | date: 'dd/MM/yyyy'" (click)="showDatepicker()" inputmode="none"
+        style="border-radius: 10px 0px 0px 10px" type="text" class="form-control">
+      <div class="input-group-append">
+        <span style="border-radius: 0px 10px 10px 0px;" class="input-group-text"><i (click)="showDatepicker()"
+            class="far fa-calendar-alt"></i></span>
+      </div>
+    </div>
+    <div class="form-group grp">
+      <label for="name">Наименование</label>
+      <input type="text" class="form-control" formControlName="name" id="name">
+    </div>
+    <div class="form-group grp">
+      <label for="price">Сумма</label>
+      <input type="number" class="form-control" formControlName="price" id="price">
+    </div>
+    <div class="form-group grp">
+      <label for="type">Список расходов</label>
+      <select formControlName="type" class="form-control" id="type">
+        <option *ngFor="let t of types" [value]="t.value">{{ t.title }}</option>
+      </select>
+    </div>
+    <div style="text-align: center;">
+      <button [disabled]="addForm.invalid" class="btn btn-lg" type="submit" style="background-color:transparent;">
+        <i style="color:green" class="fas fa-check"></i></button>
+    </div>
+  </form>
+</ion-content>

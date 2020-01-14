@@ -1,0 +1,23 @@
+ion-content {
+  --background: #0f0f0f;
+}
+#form-client {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  padding-top: 15px;
+}
+#form-client .grp {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+#form-client label {
+  font-size: 18px;
+  line-height: 21px;
+  color: #f2f2f2;
+}
+#form-client input,
+#form-client select {
+  background: #bdbdbd;
+  border-radius: 10px;
+}

@@ -1,0 +1,36 @@
+ion-content,
+ion-toolbar {
+    --background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), #545454;
+    --color: #E0E0E0;
+}
+
+.list {
+    max-height: 70vh;
+    overflow-y: scroll;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #F2F2F2;
+}
+
+.grp {
+    padding-left: 25px;
+    padding-right: 25px;
+
+}
+
+.filtr-client {
+    label {
+        font-size: 18px;
+        line-height: 21px;
+        color: #F2F2F2;
+    }
+    
+    input, select {
+        background: #BDBDBD;
+        border-radius: 10px;
+    }
+}
+

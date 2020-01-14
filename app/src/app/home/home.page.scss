@@ -1,0 +1,43 @@
+ion-content,
+ion-toolbar {
+    --background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), #545454;
+    --color: #E0E0E0;
+}
+
+.stat {
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 25px;
+
+    .head {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 28px;
+        color: #F2994A;
+    }
+
+    .npm {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 28px;
+        color: #E0E0E0;
+    }
+
+    .prs {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 26px;
+
+        color: #FFFFFF;
+    }
+
+    .main {
+        padding-top: 10px;
+    }
+}

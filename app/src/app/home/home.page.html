@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title text-right>
+      Статистика
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div style="padding-left: 10px; padding-right: 10px; padding-top: 20px;">
+    <span style="font-size: 22px; line-height: 26px; color: #F2C94C;">Итоговый баланс</span>
+    <span style="float: right; font-weight: bold; font-size: 22px; line-height: 26px; color: #F2C94C;">{{ total }} р</span>
+  </div>
+  <div class="stat" *ngFor="let s of statistic">
+    <span class="head">{{ s.year }}</span>
+    <span class="head" style="float: right;">{{ s.month }}</span>
+    <div class="main">
+      <span class="npm">Ожидание</span>
+      <span class="prs" style="float: right;">{{ s.wait }} р</span>
+    </div>
+    <div class="main">
+      <span class="npm">Поступления</span>
+      <span class="prs" style="float: right;">{{ s.payment }} р</span>
+    </div>
+    <div class="main">
+      <span class="npm">Расходы</span>
+      <span class="prs" style="float: right;">{{ s.cost }} р</span>
+    </div>
+    <div class="main">
+      <span class="npm">Остаток</span>
+      <span class="prs" style="float: right;">{{ s.balance }} р</span>
+    </div>
+  </div>
+</ion-content>

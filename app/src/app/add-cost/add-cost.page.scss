@@ -1,0 +1,27 @@
+ion-content {
+    --background: #0F0F0F;
+}
+
+#form-cost {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    padding-top: 15px;
+
+    .grp {
+        padding-left: 25px;
+        padding-right: 25px;
+
+    }
+
+    label {
+        font-size: 18px;
+        line-height: 21px;
+        color: #F2F2F2;
+    }
+
+    input, select {
+        background: #BDBDBD;
+        border-radius: 10px;
+    }
+}

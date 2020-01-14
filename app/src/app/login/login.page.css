@@ -1,0 +1,96 @@
+ion-content {
+  --background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))
+      100% 100%,
+    #545454;
+}
+.content {
+  height: 100%;
+  width: 100%;
+  font-family: Roboto;
+  font-style: normal;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.content .wrap {
+  text-align: center;
+  padding-top: 20%;
+  height: 100%;
+  position: relative;
+}
+.content .wrap .logo .main {
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 59px;
+  letter-spacing: 1px;
+  color: #bdbdbd;
+}
+.content .wrap .logo .sub {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  color: #bdbdbd;
+}
+.content .wrap .form {
+  padding-top: 18%;
+}
+.content .wrap .form input::-webkit-input-placeholder {
+  text-align: center;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+.content .wrap .form input:-moz-placeholder {
+  text-align: center;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+.content .wrap .form input::-moz-placeholder {
+  text-align: center;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+.content .wrap .form input:-ms-input-placeholder {
+  text-align: center;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+.content .wrap .form input {
+  height: 56px;
+  border-radius: 14px;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+.content .wrap .form .password {
+  margin-top: 20px;
+}
+.content .wrap .form .remember-input {
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.content .wrap .form .remember-label {
+  font-weight: normal;
+  margin-top: 25px;
+  margin-left: 10px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+}
+.content .wrap .form .login {
+  margin-top: 35px;
+}
+.content .wrap .form .login button {
+  background: #0e0e0e;
+  border-color: #0e0e0e;
+  border-radius: 14px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+  width: 100%;
+  height: 56px;
+}

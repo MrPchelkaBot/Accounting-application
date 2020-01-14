@@ -1,0 +1,38 @@
+<ion-content>
+    <form [formGroup]="infoForm" id="form-client" (ngSubmit)="save()">
+        <div class="form-group grp">
+          <label for="name">Название</label>
+          <input formControlName="name" type="text" class="form-control" id="name">
+        </div>
+        <div class="form-group grp">
+          <label for="type">Тип клиента</label>
+          <select formControlName="type" class="form-control" id="type">
+            <option *ngFor="let t of types" [value]="t.value">{{ t.title }}</option>
+          </select>
+        </div>
+        <div class="form-group grp">
+          <label for="city">Город</label>
+          <input formControlName="city" type="text" class="form-control" id="city">
+        </div>
+        <div class="form-group grp">
+          <label for="address">Адрес</label>
+          <input formControlName="address" type="text" class="form-control" id="address">
+        </div>
+        <div class="form-group grp">
+          <label for="phone">Телефон</label>
+          <input formControlName="phone" type="text" class="form-control" id="phone" prefix="+7" mask="(000) 000 00 00">
+        </div>
+        <div class="form-group grp">
+          <label for="email">Почта</label>
+          <input formControlName="email" type="text" class="form-control" id="email">
+        </div>
+        <div class="form-group grp">
+          <label for="contact">Контактное лицо</label>
+          <input formControlName="contact" type="text" class="form-control" id="contact">
+        </div>
+        <div style="text-align: center;">
+          <button [disabled]="infoForm.invalid" class="btn btn-lg" type="submit" style="background-color:transparent;">
+            <i style="color:green" class="fas fa-check"></i></button>
+        </div>
+      </form>
+</ion-content>
